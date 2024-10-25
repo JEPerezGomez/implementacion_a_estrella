@@ -6,22 +6,22 @@ graph = {
     'Zerind': [('Arad', 75), ('Oradea', 71)],
     'Oradea': [('Zerind', 71), ('Sibiu', 151)],
     'Sibiu': [('Arad', 140), ('Oradea', 151), ('Fagaras', 99), ('Rimnicu Vilcea', 80)],
-    'Fagaras': [('Sibiu', 99), ('Bucharest', 211)],
+    'Fagaras': [('Sibiu', 99), ('Bucarest', 211)],
     'Timisoara': [('Arad', 118), ('Lugoj', 111)],
     'Lugoj': [('Timisoara', 111), ('Mehadia', 70)],
     'Mehadia': [('Lugoj', 70), ('Drobeta', 75)],
     'Drobeta': [('Mehadia', 75), ('Craiova', 120)],
     'Craiova': [('Drobeta', 120), ('Rimnicu Vilcea', 146), ('Pitesti', 138)],
     'Rimnicu Vilcea': [('Sibiu', 80), ('Craiova', 146), ('Pitesti', 97)],
-    'Pitesti': [('Rimnicu Vilcea', 97), ('Craiova', 138), ('Bucharest', 101)],
-    'Bucharest': [('Fagaras', 211), ('Pitesti', 101)]
+    'Pitesti': [('Rimnicu Vilcea', 97), ('Craiova', 138), ('Bucarest', 101)],
+    'Bucarest': [('Fagaras', 211), ('Pitesti', 101)]
 }
 
 # Heurísticas estimadas desde cada ciudad hacia Bucarest
 heuristics = {
     'Arad': 366, 'Zerind': 374, 'Oradea': 380, 'Sibiu': 253, 'Fagaras': 176,
     'Timisoara': 329, 'Lugoj': 244, 'Mehadia': 241, 'Drobeta': 242, 'Craiova': 160,
-    'Rimnicu Vilcea': 193, 'Pitesti': 100, 'Bucharest': 0
+    'Rimnicu Vilcea': 193, 'Pitesti': 100, 'Bucarest': 0
 }
 
 def busqueda_a_estrella(graph, heuristics, start, goal):
@@ -66,7 +66,7 @@ def reconstruct_path(came_from, current):
 
 # Ejecución de la búsqueda A* en el mapa de Rumania
 start_city = 'Arad'
-destination_city = 'Bucharest'
+destination_city = 'Bucarest'
 path = busqueda_a_estrella(graph, heuristics, start_city, destination_city)
 
 # Resultado de la ruta óptima
